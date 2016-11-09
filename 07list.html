@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.divide {
+			background-color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>基本用法</h2>
+	<ul id="app-1">
+		<li v-for="sport in sports">
+			{{sport}}
+		</li>
+	</ul>
+
+	<ul id="app-2">
+		<li v-for="(item,index) in items">
+			{{message}} - {{item.text}} - {{index}}
+		</li>
+	</ul>
+
+	<ul id="app-3">
+		<template v-for="item in items">
+			<li>{{item.msg}}</li>
+			<li class="divide"></li>
+		</template>
+	</ul>
+
+
+
+	<h2>对象迭代v-for</h2>
+	<ul id="app-4">
+		<li v-for="(value,key) in object">{{key}}：{{value}}</li>
+	</ul>
+
+	<h2>整数迭代</h2>
+	<div id="app-5">
+		<span v-for="num in 10">{{num}}</span>
+	</div>
+
+	<h2>组件应用</h2>
+    待续。。。
+
+	<script src="node_modules/vue/dist/vue.js"></script>
+	<script src="js/list.js"></script>
+</body>
+
+</html>

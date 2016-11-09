@@ -7,7 +7,16 @@
 </head>
 
 <body>
-
+    <h2>v-if</h2>
+    <div id="app-1">
+        <div v-if="ok">yes</div>
+        <div v-else>no</div>
+    </div>
+    <h2>v-if-else</h2>
+    <div id="app-2">
+        <div v-if="Math.random()>0.5">sorry</div>
+        <div v-else>ohh...</div>
+    </div>
     <script src="node_modules/vue/dist/vue.js"></script>
     <script src="js/conditional.js" charset="utf-8"></script>
 </body>
