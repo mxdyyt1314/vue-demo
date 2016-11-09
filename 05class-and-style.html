@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>class与style绑定</title>
+    <style>
+        .static {
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+        }
+
+        .active {
+            background-color: yellow;
+        }
+
+        .text-danger {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>对象语法</h2>
+    <div id="app-1">
+        <div class="static" v-bind:class="{active:isActive,'text-danger':isDanger}">
+            {{message}}
+        </div>
+    </div>
+
+    <h2>数组语法</h2>
+    <div id="app-2">
+        <div class="static">{{message}}</div>
+    </div>
+
+    <h2>绑定内联样式
+        <div id="app-3">
+            <div v-bind:style="{color:activeColor,fontSize:fontSize+'px'}">
+                对象语法
+            </div>
+
+            <div v-bind:style="[myStyle,myStyle2]">数组语法</div>
+        </div>
+    </h2>
+
+
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="js/05class-and-style.js" charset="utf-8"></script>
+</body>
+
+</html>
