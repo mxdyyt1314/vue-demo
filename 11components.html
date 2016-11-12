@@ -7,9 +7,25 @@
 </head>
 
 <body>
+    <h2>注册自定义组件</h2>
     <div id="app-1">
-        
+        <my-component></my-component>
     </div>
+
+    <h2>局部注册</h2>
+    <div id="app-2">
+        <part-component></part-component>
+    </div>
+
+    <h2>data必须是函数</h2>
+    <div id="app-3">
+        <simple-counter></simple-counter>
+        <simple-counter></simple-counter>
+        <simple-counter></simple-counter>
+    </div>
+
+    <h2>构成组件</h2>
+    
     <script src="node_modules/vue/dist/vue.js"></script>
     <script src="js/components.js"></script>
 </body>
