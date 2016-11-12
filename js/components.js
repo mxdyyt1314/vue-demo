@@ -15,10 +15,10 @@ var app2 = new Vue({
     }
 });
 
+
 var data = {
     counter: 1
 };
-
 Vue.component("simple-counter", {
     template: "<button v-on:click='counter+=1'>{{counter}}</button>",
     data: function () {
@@ -31,3 +31,4 @@ Vue.component("simple-counter", {
 new Vue({
     el: "#app-3"
 });
+
